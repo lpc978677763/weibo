@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="{{route('home')}}">Weibo App</a>
@@ -16,9 +15,10 @@
         </ul>
       </div>
     </nav>
-
-    <div class="container">
-      @yield('content')
-    </div>
+    
+     <div class="offset-md-1 col-md-10">
+        @include('shared._messages')
+        @yield('content')
+      </div>
   </body>
 </html>
